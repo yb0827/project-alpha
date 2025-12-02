@@ -37,6 +37,7 @@ jobs:
           host: ${{ secrets.HOST_IP }}
           username: yb
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }} 
           script_stop: true # 脚本出错立即停止
           # 远程执行的Shell脚本
           script: |
