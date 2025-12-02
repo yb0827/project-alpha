@@ -35,7 +35,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST_IP }}
-          username: root
+          username: yb
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script_stop: true # 脚本出错立即停止
           # 远程执行的Shell脚本
