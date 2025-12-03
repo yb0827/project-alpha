@@ -43,16 +43,16 @@ jobs:
           script: |
             echo "--- 开始部署流程 ---"
             # 1. 停止并删除旧容器（若存在）
-            docker stop my-app || true
-            docker rm my-app || true
+            docker stop my-app1 || true
+            docker rm my-app1 || true
             # 2. 拉取Docker Hub上的最新镜像
             echo "正在拉取最新镜像..."
             docker pull ${{ secrets.DOCKER_USERNAME }}/project-alpha:latest
             # 3. 启动新容器
             echo "启动新容器..."
             docker run -d \
-              --name my-app \
+              --name my-app1 \
               --restart always \
-              -p 8080:8080 \
-              ${{ secrets.DOCKER_USERNAME }}/project-alpha:latest
+              -p 81:81 \
+              yb0529/project-alpha:latest
             echo "--- 部署完成 ---"
