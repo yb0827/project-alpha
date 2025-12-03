@@ -12,7 +12,7 @@ class SimpleAPI(BaseHTTPRequestHandler):
 'OrderService', 'version': '2.0 - Docker Edition'}
         self.wfile.write(json.dumps(response).encode())
 # 服务监听所有IP的8080端口
-server_address = ('', 8080)
-print("Microservice starting on port 8080...")
+server_address = ('', 81)
+print("Microservice starting on port 81...")
 httpd = HTTPServer(server_address, SimpleAPI)
 httpd.serve_forever()
