@@ -46,13 +46,13 @@ jobs:
             docker stop my-app1 || true
             docker rm my-app1 || true
             # 2. 拉取Docker Hub上的最新镜像
-            # echo "正在拉取最新镜像..."
-            # docker pull ${{ secrets.DOCKER_USERNAME }}/project-alpha:latest
+            echo "正在拉取最新镜像..."
+            docker pull ${{ secrets.DOCKER_USERNAME }}/project-alpha:latest
             # 3. 启动新容器
-            # echo "启动新容器..."
-            # docker run -d \
-              # --name my-app1 \
-              # --restart always \
-              # -p 81:81 \
-              # yb0529/project-alpha:latest
-            # echo "--- 部署完成 ---"
+            echo "启动新容器..."
+            docker run -d \
+              --name my-app1 \
+              --restart always \
+              -p 81:81 \
+              yb0529/project-alpha:latest
+            echo "--- 部署完成 ---"
