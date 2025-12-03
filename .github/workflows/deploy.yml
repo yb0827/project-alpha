@@ -33,9 +33,9 @@ jobs:
     steps:
       - name: SSH远程部署
         uses: appleboy/ssh-action@v1.0.3
-        # with:
-        #   host: ${{ secrets.HOST_IP }}
-        #   username: yb
+        with:
+          host: 120.55.245.105
+          username: yb
         #   key: ${{ secrets.SSH_PRIVATE_KEY }}
         #   fingerprint: ${{ secrets.SSH_FINGERPRINT }} 
         #   script_stop: true # 脚本出错立即停止
