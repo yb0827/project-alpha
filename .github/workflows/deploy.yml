@@ -32,15 +32,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH远程部署
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST_IP }}
-          username: yb
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ secrets.SSH_FINGERPRINT }} 
-          script_stop: true # 脚本出错立即停止
-          # 远程执行的Shell脚本
-          script: |
+        # uses: appleboy/ssh-action@v1.0.3
+        # with:
+        #   host: ${{ secrets.HOST_IP }}
+        #   username: yb
+        #   key: ${{ secrets.SSH_PRIVATE_KEY }}
+        #   fingerprint: ${{ secrets.SSH_FINGERPRINT }} 
+        #   script_stop: true # 脚本出错立即停止
+        #   # 远程执行的Shell脚本
+        #   script: |
             echo "--- 开始部署流程 ---"
             # 1. 停止并删除旧容器（若存在）
             # docker stop my-app1 || true
