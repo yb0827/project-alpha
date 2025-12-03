@@ -41,12 +41,12 @@ jobs:
         #   script_stop: true # 脚本出错立即停止
         #   # 远程执行的Shell脚本
         #   script: |
-            echo "--- 开始部署流程 ---"
+            # echo "--- 开始部署流程 ---"
             # 1. 停止并删除旧容器（若存在）
             # docker stop my-app1 || true
             # docker rm my-app1 || true
             # 2. 拉取Docker Hub上的最新镜像
-            echo "正在拉取最新镜像..."
+            # echo "正在拉取最新镜像..."
             # docker pull ${{ secrets.DOCKER_USERNAME }}/project-alpha:latest
             # 3. 启动新容器
             # echo "启动新容器..."
@@ -55,4 +55,4 @@ jobs:
               # --restart always \
               # -p 81:81 \
               # yb0529/project-alpha:latest
-            echo "--- 部署完成 ---"
+            # echo "--- 部署完成 ---"
